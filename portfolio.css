@@ -1,0 +1,742 @@
+body {
+	background-image:url(https://zupimages.net/up/20/23/ped7.png);
+	font-family:'muli';
+	padding:0px;
+	margin: 0px;
+	display:flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	font-size: 0.8vw;
+	text-rendering: optimizelegibility;
+}
+
+a:link, a:visited, a:focus, a:active {
+	color:initial;
+	text-decoration: none;
+	border-bottom:3px solid lightgreen;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: blue;
+  color: lightgreen;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-weight: 900
+}
+
+.tooltip .tooltiptext::after {
+  illu: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: blue transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*******************************BODY**********************************************/
+
+h2 {
+	font-family:coolvetica;
+	font-size:3vw;
+	border-bottom: 1vh solid;
+	padding-bottom: 5%;
+	text-align:left;
+}
+
+h1.title {
+	font-family: coolvetica;
+	position: absolute;
+	left: 50vw;
+	top: 47vh;
+	transform: translate(-50%, -50%);
+	font-size: 3vw;
+	color: white;
+	background: blue;
+	padding: 3%;
+	letter-spacing: 5px;
+	text-transform: lowercase;
+}
+
+.header, .page_projet, .calendar, .agrandir, .illustrations, .typo, .bluephobia, .vinyle, .yearbook, .magazine {
+	height:100vh; width:100vw;
+}
+
+/********************************* CURRICULUM *******************************/
+
+.curriculum {
+	width:100%; height:100vh;
+	columns: 20vw 4; position:relative; display: flex
+}
+
+h1.title_cv {
+	position: absolute;
+	top: 0vh;
+	right:0vw;
+	padding:1%;
+	background:transparent; color:blue;
+	font-weight: 900; text-transform: uppercase;
+	font-size:0.9vw; 
+}
+
+.cadre {
+	width:100%;
+	height:max-illu;
+	position:relative;
+	top:50vh; transform:translateY(-50%);
+}
+
+.curriculum img {
+	float: left;
+	margin-left: 25%; margin-bottom: 2%;
+	width:50%;
+	box-shadow: 10px 10px 0 transparent;
+}
+
+.one .cadre {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts {
+    margin-left:25%;
+    width: 55%;
+}
+
+.contacts p {
+	display:flex;
+}
+
+.contacts i {
+    width:10%; float:left;
+    color:blue; font-weight: 900;
+    margin-top:3px;
+}
+
+.textarea {
+	width:60%;
+	height:75vh;
+	margin:auto;
+	background:blue;
+	color:white;
+	padding:10%;
+	line-height: 25px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+
+.textarea::before {
+    illu: "";
+    position: absolute;
+    top: 35%;
+    width: 20%;
+    background: blue;
+    left: 0;
+    height: 10%;
+    display: block;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(-90deg);
+}
+
+.texte {
+	width:60%;
+	height:75vh;
+	margin:0 auto;
+	padding:10%;
+	line-height: 25px;
+	background: initial;
+}
+
+.texte i {
+    color: lightgreen;
+    text-shadow: 1px 1px 0px blue; margin-right:0.3vw;
+}
+
+.texte h2 {
+	color:blue;
+}
+
+.texte span {
+	font-family:coolvetica;
+}
+
+.texte .fa-circle {
+	padding-right:10px; 
+}
+
+/************************** PAGE PROJET *************************/
+.projet {
+	width:15vw;
+	height:15vw;
+	border-radius:300px;
+	position:relative;
+	overflow: hidden;
+	margin:auto;
+}
+
+.projet_ligne {
+	display:flex; height:50vh; width:100vw;
+}
+
+.projet:hover .titre_projet {
+	transform: rotate(720deg) scale(0);
+}
+
+.projet:hover .img_projet img {
+	filter: blur(0px);transform:scale(0.8);
+}
+
+.img_projet img {
+	width:100%; height:100%; border-radius: 300px;
+	filter: blur(10px);	transition: 0.25s ease;
+}
+
+.cover_projet {
+	width:100%; height:100%; border-radius:300px;
+}
+
+.titre_projet {
+    position: absolute;
+    z-index: 3;
+    background: blue;
+    width: 100%;
+    height: 100%;
+    border-radius: 300px;
+	transition: 0.5s ease;
+	text-align: center;
+}
+
+.img_projet {
+    position: absolute;
+    top: 0;
+    z-index: 2; 
+}
+
+ .projet h1 {
+ 	font-family: coolvetica;
+	position: absolute;
+	left: 50%;
+	top: calc(-1vw + 50%);
+	transform: translate(-50%, -50%);
+	font-size: 1.5vw;
+	color: white;
+	letter-spacing: 5px;
+	text-transform: lowercase;
+	width: 100%;
+ }
+
+#calendar::before, #agrandir::before, #illustrations::before, #typo::before, #vinyle::before, #yearbook::before, #magazine::before, #bluephobia::before {
+    content: "";
+    filter: blur(6px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center;
+	background-size: 150%;
+}
+
+#calendar::before {background-image: url(https://zupimages.net/up/20/22/ii6h.jpg);
+}
+#agrandir::before {background-image:url(https://zupimages.net/up/20/22/q0dm.jpg);background-blend-mode: luminosity;
+}
+#illustrations::before {background-image:url(https://zupimages.net/up/20/22/isj7.jpg) ;
+}
+#typo::before {background-image:url(https://zupimages.net/up/20/23/hi79.jpg);
+}
+#vinyle::before {background-image: url(https://zupimages.net/up/20/22/iyqs.jpg)
+}
+#yearbook::before {background-image: url(https://zupimages.net/up/20/22/mion.jpg)}
+#magazine::before {background-image: url(notyet)}
+#bluephobia::before {background-image: url(https://zupimages.net/up/20/22/5bxu.jpg)}
+
+
+/********************************* CALENDAR *******************************/
+
+
+.calendar_page {display: flex; columns:33.3vw 3;}
+
+.calendar_column {width:100%; height:100vh; position:relative;}
+.calendar_column img {
+	height:70%;transform:translateY(20%);
+	display: block;
+}
+
+.fas.fa-expand {
+    position: absolute;
+	top: 15.5%;
+	right: 2%;
+    color: lightgreen;
+    background: blue;
+    padding: 5px; font-weight: 900;cursor: zoom-in;
+}
+
+.calendar_title {
+	position:absolute; top:0vh; left:50%; transform: translate(-50%, 50%);
+}
+
+.calendar_title h1 {
+	font-size:5vw; font-family: coolvetica; color:blue; margin:0;
+}
+
+.desc {
+	padding:15%; height:max-illu; position:absolute;
+	top:50vh; transform: translateY(-50%); text-align: justify; text-justify:inter-word;
+}
+
+v {
+	font-weight: 900; color:blue;
+}
+
+.calendar i, .agrandir i, .illustrations i, .typo i, .bluephobia i, .vinyle i, .yearbook i {
+    color: lightgreen;
+    text-shadow: 1px 1px 0px blue;
+    font-weight:900;
+}
+
+/********************************* AGRANDIR *******************************/
+
+.agrandir_page {
+	width:100%; height:100%;
+	position: relative
+}
+
+#agrd_vid {
+	position: absolute; left:39vw; top:50vh; 
+	transform: translate(-50%,-50%);
+}
+
+.agrandir h1 {
+	color:blue; margin: 0;
+	font-family: coolvetica;
+	font-size:5vw; text-align: right;
+}
+
+.exercice {
+	font-weight: 900; margin:0; text-transform: uppercase; border:none;
+	font-size:0.9vw; text-align: right;color: lightgreen;
+	text-shadow: 1px 1px 0px black; letter-spacing: 0.4vw; padding: 0
+}
+
+.agrd_inst {
+	width:20vw; float: left; margin-left:4%;
+}
+.agrd_desc {
+	width:20vw; float: right; 
+}
+
+.agrd_h {
+	color:blue;
+}
+
+.agrd_desc h2 {
+	padding-bottom: 0;
+	font-size: 2.3vw;
+	border-width:0.7vh;
+}
+
+
+/************************************ILLUSTRATION**********************************/
+
+.illustrations {
+	position: relative; 
+}
+
+.tabs input {
+	cursor: pointer;
+	position: absolute;
+	right: 2vw;
+	top: 40vh;
+	transform: translateY(-50%); z-index: 2; width:20px; height: 20px;
+	opacity: 0
+}
+
+label {
+	position: absolute;
+	right: 2vw;
+	top: 40vh;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	background: blue; color:blue;
+	border-radius: 300px;
+}
+
+#tab-2, #lab-2 {
+    margin-top: 10%;
+}
+
+.illu {
+    width: 100%;
+}
+
+.illu div {
+    position: absolute;
+    left: 80.3vw;
+    top: 50vh;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all linear 0.1s;
+    -moz-transition: all linear 0.1s;
+    -o-transition: all linear 0.1s;
+    -ms-transition: all linear 0.1s;
+    transition: all linear 0.1s;
+    transform: translate(-80%, -50%); height: 90vh
+}
+
+.illu img {
+	height:90vh;
+
+}
+
+.tabs input.tab-selector-1:checked ~ #lab-1,
+.tabs input.tab-selector-2:checked ~ #lab-2 {
+	background:lightgreen; color:green;
+}
+
+.illustrations h1, .typo h1, .bluephobia h1, .vinyle h1, .yearbook h1 {
+	color:blue; margin: 0;
+	font-family: coolvetica;
+	font-size:5vw;
+}
+
+.illu_title {
+	width: max-content;
+	position: absolute;
+	top: 2%;
+	left: 2%;
+}
+
+.illustrations .tabs input.tab-selector-1:checked ~ .illu_desc .illu_desc-1,
+.illustrations .tabs input.tab-selector-2:checked ~ .illu_desc .illu_desc-2,
+.illustrations .tabs input.tab-selector-1:checked ~ .illu .illu-1,
+.illustrations .tabs input.tab-selector-2:checked ~ .illu .illu-2 {
+    z-index: 100;
+    opacity: 1;
+    transition: all ease-out 0.2s 0.2s;
+}
+
+.illu_desc {
+    width: 25vw;
+    height: 100%;
+}
+
+.illu_desc div {
+	position: absolute;
+    top: 35vh;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all linear 0.1s;
+    -moz-transition: all linear 0.1s;
+    -o-transition: all linear 0.1s;
+    -ms-transition: all linear 0.1s;
+    transition: all linear 0.1s;
+    transform: translateY(-35%);
+	left: 3vw;
+	width: 25vw;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#lab-1::after {
+    content: "\f077";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: relative;
+    top: -100%;
+    left: 17%;
+}
+
+#lab-2::after {
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: relative;
+    top: 100%;
+    left: 17%;
+}
+
+/********************* TYPOGRAPHY ***************************/
+
+.page_typo {width: 100%; height: 100%; position: relative;}
+.indic_typo {position: absolute; left:2vw; bottom:5vh; }
+
+.indic_typo h2:before {
+    content: '"click!"';
+    font-size: 1.3vw; color:blue;
+    position: absolute;
+    bottom: 5vh;
+    left: 5vw;
+}
+
+.typo_title {
+	width: max-content;
+	position: absolute;
+	top: 20vh; transform: translateY(-20%);
+	right: 2%;
+}
+
+.typo_img {width:55vw; height:100vh; }
+
+.typo_img img {
+    width: 55vw; max-width: 1024px; margin: 0; 
+    padding: 0;position: absolute; left:5vw; top:5vh;
+    transition: 0.25s ease;
+}
+
+#gate_reg {z-index:3;}
+#gate_bold {z-index:2; left:7vw; top:7vh;}
+.bold {z-index:4!important;}
+.reg {left:5vw!important; height:5vh!important;}
+
+.desc_typo {
+	width:25vw; height:max-content; position: absolute; right:2vw; top:37vh;
+}
+
+
+/*************************** BLUEPHOBIA **************************/
+
+
+.page_blue, .page_vinyle, .yearbook_page {width: 100%; height:100%; position: relative;}
+
+.blue_title {
+	width: max-content;
+	position: absolute;
+	top: 5vh; transform: translateY(-10%);
+	right: 2vw;
+}
+
+
+.bluephobia label, .bluephobia input {
+	left:2vw; top:35vh;
+}
+
+.bluephobia #tab-2, .bluephobia #lab-2 {
+    margin-top: 5%;
+}
+.bluephobia #tab-3, .bluephobia #lab-3 {
+    margin-top: 10%;
+}
+.bluephobia #tab-4, .bluephobia #lab-4 {
+    margin-top: 15%;
+}
+
+
+.blue {
+    width: 100%;
+}
+
+.blue div {
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all linear 0.1s;
+    -moz-transition: all linear 0.1s;
+    -o-transition: all linear 0.1s;
+    -ms-transition: all linear 0.1s;
+    transition: all linear 0.1s;
+    width: 60vw;
+}
+
+.blue img {
+    width: 60vw;
+    position: absolute;
+    left: 5vw;
+    top: 50vh;
+    transform: translate(0, -50%);
+    z-index: 3;
+}
+
+#dark, #dark-2, #dark-3, #dark-4 {
+	z-index:2;
+	top:52vh; left:7vw;
+}
+
+
+.tabs input.tab-selector-1:checked ~ #lab-1,
+.tabs input.tab-selector-2:checked ~ #lab-2,
+.tabs input.tab-selector-3:checked ~ #lab-3,
+.tabs input.tab-selector-4:checked ~ #lab-4 {
+	background:lightgreen; color:green;
+}
+
+.tabs input.tab-selector-1:checked ~ .blue .blue-1,
+.tabs input.tab-selector-2:checked ~ .blue .blue-2,
+.tabs input.tab-selector-3:checked ~ .blue .blue-3,
+.tabs input.tab-selector-4:checked ~ .blue .blue-4,
+.tabs input.tab-selector-1:checked ~ .blue_desc .blue_desc-1,
+.tabs input.tab-selector-2:checked ~ .blue_desc .blue_desc-2,
+.tabs input.tab-selector-3:checked ~ .blue_desc .blue_desc-3,
+.tabs input.tab-selector-4:checked ~ .blue_desc .blue_desc-4{
+    z-index: 100;
+    opacity: 1;
+    transition: all ease-out 0.2s 0.2s;
+}
+
+.blue_desc {
+    width: 25vw;
+    height: 100%;
+}
+
+.blue_desc div {
+	position: absolute;
+    top: 40vh; transform: translateY(-40%);
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all linear 0.1s;
+    -moz-transition: all linear 0.1s;
+    -o-transition: all linear 0.1s;
+    -ms-transition: all linear 0.1s;
+    transition: all linear 0.1s;
+	right: 2vw;
+	width: 25vw;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.bluephobia #lab-1::after {
+    content: "\f077";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: relative;
+    top: -100%;
+    left: 17%;
+}
+
+.bluephobia #lab-2::after {
+content:''!important;
+}
+
+.bluephobia #lab-4::after {
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: relative;
+    top: 100%;
+    left: 17%;
+}
+
+.bluephobia .tooltip .tooltiptext {
+	left:100%;
+}
+
+.tooltip {
+	border-bottom:3px solid lightgreen;
+}
+
+
+/******************************* VINYLE *********************************/
+
+
+.vinyle_title {
+	width: max-content;
+	position: absolute;
+	top: 2vh;
+	left: 5vw;
+}
+
+.vinyle_slider {
+	height:70vh;
+	position: absolute;
+	top: 23vh; left:2vw;
+}
+
+.button_container {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.but_right {
+    position: absolute;
+    right: 30%;
+}
+.but_left {
+    position: absolute;
+    left: 30%;
+}
+.but_right i, .but_left i {transition: 0.2s ease-in-out}
+.but_right i:hover, .but_left i:hover {color:blue!important;}
+
+.vinyle_img {display:none; width:65vw; transition: 0.2s ease}
+.but_left, .but_right, .radio_button {cursor:pointer; font-size: 1vw;}
+.radio_button {height:13px;width:13px;padding:0}
+.radio_button.demo {
+    background: blue;
+    border-radius: 300px;
+    position: absolute;
+    left: 42.5%; top:0.5vh;
+	transform: translateX(-50%);transition: 0.2s ease-in-out
+}
+
+.radio_button_active {
+	background:lightgreen!important;
+}
+
+.desc_vinyle {
+    width: 25vw;
+    position: absolute;
+    right: 5vw;
+    top: 50vh; transform: translateY(-50%);
+    text-align: justify; text-justify: inter-word;
+}
+
+.fading{
+	animation:fading 0.5s ease
+	}
+
+@keyframes fading{
+	0%{opacity:0}
+	
+	100%{opacity:1}
+}
+
+/******************************** YEARBOOK ************************************/
+
+.year_title {
+	width: max-content;
+	position: absolute;
+	top: 5vh; transform: translateY(-10%);
+	right: 2vw;
+}
+
+.year_img {
+	position: absolute; top:25vh; left:50vw; 
+	transform:translateX(-50%); display:flex; width:80vw;
+}
+
+.year_img img {
+	width:25vw; margin:auto;
+}
+
+.desc_year {
+	text-align: justify;
+	text-justify:inter-word;
+}
+
+.desc_year span {
+	display: block; width:22vw;
+}
